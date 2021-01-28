@@ -1,0 +1,9 @@
+POST http://localhost:3001/api/expenses
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNhbXBwYTk1IiwiaWQiOiI2MDAwYWM0YmE2ZGJlYjRjNTAwMTI5ZmQiLCJpYXQiOjE2MTA2NTY4NTN9.q2prvyTomFdf0W3xmLcDBoe7PPn9jGQvTK0M4x9ezG0
+Content-Type: application/json
+
+{
+    "price": 50,
+    "category": "Harrastukset",
+    "description": "tennisvuorot"
+}
