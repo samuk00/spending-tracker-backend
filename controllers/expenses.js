@@ -51,6 +51,17 @@ expensesRouter.post('/', async (request, response, next) => {
     }
 })
 
+expensesRouter.delete('/:id', async (request, response, next) => {
+    const id = request.params.id
+    console.log(id)
+    try {
+        await Expense.findByIdAndRemove(id)
+        response.status(204).end()
+    } catch (exception) {
+        next(exception)
+    }
+})
+
 
 module.exports = expensesRouter
 

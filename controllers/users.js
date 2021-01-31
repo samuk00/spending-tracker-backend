@@ -53,6 +53,13 @@ usersRouter.post('/', async (request, response, next) => {
 usersRouter.put('/:id', async (request, response, next) => {
     const id = request.params.id
     const newBudget = request.body.budget
+
+    if(!newBudget) {
+        return response.status(400).json({
+            error: 'Budget cannot be empty'
+        })
+    }
+
     try {
         const user = await User.findByIdAndUpdate(id, { budget: newBudget })
         response.status(201).json({ budget: user.budget })

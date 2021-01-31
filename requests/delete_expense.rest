@@ -1,0 +1,1 @@
+DELETE http://localhost:3001/api/expenses/6000ac6da6dbeb4c500129fe
