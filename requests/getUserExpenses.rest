@@ -1,1 +1,0 @@
-GET http://localhost:3001/api/expenses/5ffdc8797a28f24dfc305e93

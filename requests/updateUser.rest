@@ -1,6 +1,0 @@
-PUT http://localhost:3001/api/users/6000ac3ea6dbeb4c500129fc
-Content-Type: application/json
-
-{
-"budget": 100
-}
