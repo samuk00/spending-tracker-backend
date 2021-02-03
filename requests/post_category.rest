@@ -1,9 +1,7 @@
-POST http://localhost:3001/api/expenses
+POST http://localhost:3001/api/categories
 Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNhbXBwYTk1IiwiaWQiOiI2MDFiMGMxN2JlYzE2YzM0Y2MzNTRkNjMiLCJpYXQiOjE2MTIzODUzMjJ9.KrVjQHMOG9okICsO1TpeaIweYbhTswHYxSGSkxTxZb4
 Content-Type: application/json
 
 {
-    "price": 50,
-    "category": "Opiskelu",
-    "description": "Kirjat"
+    "category": "Urheilu"
 }

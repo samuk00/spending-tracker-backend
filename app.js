@@ -7,6 +7,7 @@ const config = require('./utils/config')
 const userRouter = require('./controllers/users')
 const loginRouter = require('./controllers/login')
 const expensesRouter = require('./controllers/expenses')
+const categoriesRouter = require('./controllers/categories')
 
 const mongoURI = config.MONGODBURI
 
@@ -20,6 +21,7 @@ app.use(middleware.tokenExtractor)
 app.use('/api/users', userRouter)
 app.use('/api/login', loginRouter)
 app.use('/api/expenses', expensesRouter)
+app.use('/api/categories', categoriesRouter)
 app.use(middleware.errorHandler)
 
 

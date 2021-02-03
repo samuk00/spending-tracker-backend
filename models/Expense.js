@@ -7,10 +7,10 @@ const expenseSchema = mongoose.Schema({
     },
     category: String,
     description:  String,
-    date: String,
+    date: Date,
     user: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'Expense'
+        ref: 'User'
     }
 })
 

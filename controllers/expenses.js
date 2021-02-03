@@ -22,23 +22,21 @@ expensesRouter.get('/:id', async (request, response, next) => {
     } catch(expection){
         next(expection)
     }
-    
 })
 
 expensesRouter.post('/', async (request, response, next) => {
     const body = request.body
-    const date = new Date()
-    const dateString = `${date.getDate()}.${date.getMonth() + 1}.${date.getFullYear()}`
 
     try {
         const decodedToken = jwt.verify(request.token, config.SECRET)
         const user = await User.findById(decodedToken.id)
 
+
         const expense = new Expense({
             price: body.price,
             category: body.category,
             description: body.description,
-            date: dateString,
+            date: new Date(),
             user: user.id
         })
 
